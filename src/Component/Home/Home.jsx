@@ -5,14 +5,16 @@ import { GiMeal } from "react-icons/gi";
 import { IoMdAdd } from "react-icons/io";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import AddExpense from "../Add Expense/AddExpense";
-import BarChart from "../BarChart/BarChart";
+import BarChart from "../Chart/BarChart";
 import Navbar from "../Navbar/Navbar";
+import Income from "../Income/Income";
+import PieChart from "../Chart/PieChart";
 
 function Home() {
   return (
     <>
       <Navbar />
-      <div className="bg-color h-screen">
+      <div className="bg-color ">
         <div className="container-wrapper px-2">
           <div className="lg:flex justify-between py-2  ">
             <div className="px-10 grad rounded-2xl w-7/12 ">
@@ -42,7 +44,7 @@ function Home() {
           </div>
 
           <div className="lg:flex justify-between py-6">
-            <div className="px-4 grad rounded-2xl w-1/3 mx-2 py-3">
+            <div className="px-4 grad rounded-2xl w-1/3 py-3">
               <div className="flex justify-between items-center">
                 <p className="text-white text-lg font-semibold">
                   The highest expense
@@ -50,6 +52,9 @@ function Home() {
                 <p className="button-bg-color rounded-full px-2 py-2">
                   <MdKeyboardArrowRight className="text-white text-2xl " />
                 </p>
+              </div>
+              <div>
+                <PieChart />
               </div>
             </div>
             <div className="px-4 grad rounded-2xl w-1/3 mx-2  py-3">
@@ -60,7 +65,7 @@ function Home() {
                 </p>
               </div>
               <div>
-                <p className="text-white text-xl font-normal mt-6">
+                <p className="text-white text-xl font-normal mt-4 ">
                   To Buy an iPhone
                 </p>
                 <p className="text-white text-lg font-semibold mt-2">
@@ -83,6 +88,15 @@ function Home() {
                 <p className="button-bg-color rounded-full px-2 py-2">
                   <MdKeyboardArrowRight className="text-white text-2xl " />
                 </p>
+              </div>
+              <div className="mt-3 ">
+                <Income
+                  amount="₹635"
+                  title="Zasya Solution"
+                  shortdes="salary"
+                />
+                <Income amount="₹4000" title="FD" shortdes="Savings" />
+                <Income amount="₹1000" title="Pay Pal" shortdes="credit" />
               </div>
             </div>
           </div>

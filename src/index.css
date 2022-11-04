@@ -35,6 +35,9 @@ code {
 .border-col {
   border: 2px solid #1d32ad;
 }
+.border-col-sky {
+  border: 1px solid #02f6d8;
+}
 
 .border-bottom {
   border-bottom: 2px solid #1d32ad;
