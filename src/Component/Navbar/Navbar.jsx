@@ -33,7 +33,8 @@ function Navbar() {
         <div className="flex items-center justify-between ">
           <div className="mx-2">
             <NavLink
-              to="/daily"
+              // to="/daily"
+              to="#"
               className="btn border-col font-color-blue  px-6 py-2 rounded-full text-lg font-semibold hover:text-white"
             >
               Daily
@@ -41,7 +42,8 @@ function Navbar() {
           </div>
           <div className="mx-2">
             <NavLink
-              to="/weekly"
+              // to="/weekly"
+              to="#"
               className="  btn border-col font-color-blue  px-6 py-2 rounded-full text-lg font-semibold hover:text-white "
             >
               Week
@@ -50,7 +52,8 @@ function Navbar() {
 
           <div className="mx-2">
             <NavLink
-              to="/monthly"
+              // to="/monthly"
+              to="#"
               className="btn border-col font-color-blue  px-6 py-2 rounded-full text-lg font-semibold hover:text-white "
             >
               Month

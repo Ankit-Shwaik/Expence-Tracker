@@ -22,7 +22,7 @@ const data = {
       },
     },
     title: {
-      text: "Monochrome Pie",
+      text: "",
     },
     dataLabels: {
       formatter(val, opts) {
@@ -38,7 +38,7 @@ const data = {
 
 function PieChart() {
   const [chartData, setChartData] = useState(data);
-  console.log(chartData);
+
   return (
     <>
       <Chart

@@ -4,7 +4,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { GiMeal } from "react-icons/gi";
 import { IoMdAdd } from "react-icons/io";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import AddExpense from "../Add Expense/AddExpense";
+import AddExpense from "../AddExpense/AddExpense";
 import BarChart from "../Chart/BarChart";
 import Navbar from "../Navbar/Navbar";
 import Income from "../Income/Income";
@@ -30,21 +30,27 @@ function Home() {
                 <AddExpense
                   title="Transport"
                   icon1={<FaCarSide className="text-white text-2xl " />}
+                  value={20}
+                  totalValue={100}
                 />
                 <AddExpense
                   title="Food"
                   icon1={<GiMeal className="text-white text-2xl " />}
+                  value={80}
+                  totalValue={100}
                 />
                 <AddExpense
                   title="Shopping"
                   icon1={<AiOutlineShopping className="text-white text-2xl " />}
+                  value={60}
+                  totalValue={100}
                 />
               </div>
             </div>
           </div>
 
           <div className="lg:flex justify-between py-6">
-            <div className="px-4 grad rounded-2xl w-1/3 py-3">
+            <div className="px-4 grad rounded-2xl w-1/3 py-3 mx-2">
               <div className="flex justify-between items-center">
                 <p className="text-white text-lg font-semibold">
                   The highest expense
