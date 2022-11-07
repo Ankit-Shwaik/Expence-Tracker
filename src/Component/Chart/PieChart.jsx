@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Chart from "react-apexcharts";
 
 const data = {
-  series: [3000, 5000, 840],
+  series: [3000, 4000, 8000, 3240],
   options: {
     chart: {
       width: "100%",
       type: "pie",
     },
-    labels: ["Health", "Transport", "Housing"],
+    labels: ["Health", "transport", "Food", "Shopping"],
     theme: {
       monochrome: {
         enabled: true,
@@ -33,17 +33,18 @@ const data = {
     legend: {
       show: false,
     },
+    fill: {
+      colors: ["#23d7be", "#5e17a5", "#231882"],
+    },
   },
 };
 
 function PieChart() {
-  const [chartData, setChartData] = useState(data);
-
   return (
     <>
       <Chart
-        options={chartData.options}
-        series={chartData.series}
+        options={data.options}
+        series={data.series}
         type="pie"
         width="300"
         height="220"

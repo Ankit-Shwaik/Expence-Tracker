@@ -1,10 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Home from "./Component/Home/Home";
 import "./App.css";
-import Daily from "./Component/Daily/Daily";
-import Weekly from "./Component/Weekly/Weekly";
-import Monthly from "./Component/Monthly/Monthly";
+import "./index.css";
+import Home from "./Component/Home/Home";
 import { NotFound } from "./Component/NotFound/NotFound";
 
 function App() {

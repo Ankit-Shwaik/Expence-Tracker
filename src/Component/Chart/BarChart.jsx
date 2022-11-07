@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Chart from "react-apexcharts";
 
 const data = {
@@ -9,57 +9,56 @@ const data = {
     xaxis: {
       categories: [1, 2, 3, 4, 5, 6, 7],
     },
+    fill: {
+      type: "gradient",
+      gradient: {
+        shade: "light",
+        gradientToColors: ["#23d7be", "#5e17a5"],
+        type: "vertical",
+        shadeIntensity: 0.25,
+        opacityFrom: 0.4,
+        opacityTo: 0.9,
+        stops: [0, 100],
+      },
+      colors: ["#23d7be", "#5e17a5"],
+    },
   },
   series: [
     {
       name: "series-1",
-      data: [30, 40, 45, 50, 49, 60, 70],
-    },
-  ],
-  fill: {
-    type: "gradient",
-    gradient: {
-      shadeIntensity: 1,
-      opacityFrom: 0.7,
-      opacityTo: 0.9,
-      colorStops: [
-        {
-          offset: 0,
-          color: "#EB656F",
-          opacity: 1,
-        },
-        {
-          offset: 20,
-          color: "#FAD375",
-          opacity: 1,
-        },
-        {
-          offset: 60,
-          color: "#61DBC3",
-          opacity: 1,
-        },
-        {
-          offset: 100,
-          color: "#95DA74",
-          opacity: 1,
-        },
+      data: [
+        60, 70, 35, 25, 49, 60,
+
+        70,
       ],
     },
-  },
+  ],
+
+  responsive: [
+    {
+      breakpoint: 1000,
+      options: {
+        plotOptions: {
+          bar: {
+            horizontal: false,
+          },
+        },
+        legend: {
+          position: "bottom",
+        },
+      },
+    },
+  ],
 };
 function BarChart() {
-  const [chartData, setChartData] = useState(data);
-
   return (
-    <div className="app">
-      <Chart
-        options={chartData.options}
-        series={chartData.series}
-        type="bar"
-        width="600"
-        height="320"
-      />
-    </div>
+    <Chart
+      options={data.options}
+      series={data.series}
+      type="bar"
+      width="100%"
+      height="320"
+    />
   );
 }
 export default BarChart;
